@@ -1,0 +1,33 @@
+doctype html
+html
+	include layout/head.pug
+
+	body
+		.app.app-index
+			.row.wrapper
+				include layout/header.pug
+				.container.section.section--index-section
+					h1.title.title--index Всё самое вкусное со всего мира:
+					.carousel-block
+						.index-carousel-1
+							div(data-title="Камчатка. Россия" data-thumb="images/kamchatka.png")
+								img(src="images/king-claw.png" srcset="")
+							div(data-title="Йокогама. Япония")
+								img(src="images/ramen.png" srcset="")
+							div(data-title="Нью-Дели. Индия")
+								img(src="images/chiken-karry.png" srcset="")
+						.index-carousel-thumbnail
+							img(src="images/kamchatka.png")
+							p Камчатка. <br> Россия
+
+			
+			script(src="/vendor/js/jquery.min.js")
+			script(src="/vendor/js/jquery.mask.min.js")
+			script(src="/vendor/js/jquery.validate.min.js")
+			script(src="/vendor/js/tether.min.js")
+			script(src="/vendor/js/bootstrap.min.js")
+			script(src="/vendor/js/slick.min.js")
+			script(src="/js/main.js")
+
+
+			include layout/footer.pug

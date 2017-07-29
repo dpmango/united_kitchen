@@ -1,0 +1,43 @@
+{
+  "name": "united_kitchen",
+  "version": "1.0.0",
+  "description": "Food",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpmango/gulp-starter-pack.git"
+  },
+  "author": "Yaroslav Kondratiuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dpmango/gulp-starter-pack/issues"
+  },
+  "homepage": "https://github.com/dpmango/gulp-starter-pack#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cache": "^0.4.6",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-inline-images": "^1.2.6",
+    "gulp-inline-svg": "^1.1.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sugar-srcset": "^0.4.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-webfont": "0.0.1-3",
+    "run-sequence": "^2.1.0"
+  },
+  "dependencies": {
+    "pump": "^1.0.2"
+  }
+}
