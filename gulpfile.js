@@ -4,7 +4,7 @@
 var gulp = require('gulp');
 var watch = require('gulp-watch');
 var runSequence = require('run-sequence');
-var del = require('del'); 	
+var del = require('del');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
@@ -44,11 +44,11 @@ gulp.task('watch', function(){
 gulp.task('build', function (callback) {
   runSequence(
     'clean:dist',
+    'vendor-js',
+    'vendor-css',
     'images',
     'html',
-    'vendor-css',
     'sass',
-    'vendor-js',
     'main-js',
     'fonts',
     callback
@@ -76,7 +76,7 @@ gulp.task('vendor-css', function() {
 // Работа с CSS файлами
 gulp.task('sass', function () {
   return gulp.src('./src/sass/**/*.scss')
-  	.pipe(sass().on('error', sass.logError)) 
+  	.pipe(sass().on('error', sass.logError))
   	.pipe(autoprefixer({ // Добавляем вендорные префиксы
             browsers: ['last 2 versions'],
             cascade: false,
@@ -96,7 +96,7 @@ gulp.task('sass', function () {
 // Bootstrap
 gulp.task('sass:bootstrap', function () {
 	return gulp.src('./bower_components/bootstrap/scss/**/*.scss')
-  	.pipe(sass().on('error', sass.logError)) 
+  	.pipe(sass().on('error', sass.logError))
   	.pipe(autoprefixer({ // Добавляем вендорные префиксы
             browsers: ['last 2 versions'],
             cascade: false,
@@ -152,7 +152,7 @@ gulp.task('html', function buildHTML() {
       // .pipe(inlineImages({}))
       .pipe(srcset({
       	responsive: { src: true },
-      	resolution: { pixelRatio: [1,2] }, 
+      	resolution: { pixelRatio: [1,2] },
       }))
       .pipe( gulp.dest('./dist/') )
       .pipe(browserSync.reload({
@@ -163,9 +163,9 @@ gulp.task('html', function buildHTML() {
 // Минифицируем изображения
 gulp.task('images', function(){
   return gulp.src('./src/images/**/*.+(png|jpg|gif|svg|ico)')
-  .pipe(cache(imagemin({
-      interlaced: true
-    })))
+  // .pipe(cache(imagemin({
+  //     interlaced: true
+  //   })))
   .pipe(gulp.dest('dist/images'))
   .pipe(browserSync.reload({
         stream: true

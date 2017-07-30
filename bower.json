@@ -16,6 +16,10 @@
   ],
   "dependencies": {
     "normalize-css": "^7.0.0",
-    "slick-carousel": "^1.7.0"
+    "slick-carousel": "^1.7.0",
+    "jquery-mask-plugin": "^1.14.11",
+    "jquery-validation": "^1.17.0",
+    "tether": "^1.4.0",
+    "bootstrap": "^3.3.7"
   }
 }
