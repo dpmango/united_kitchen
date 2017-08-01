@@ -1,16 +1,39 @@
-$(document).ready(function(){
+$(function() {
 
+	$(document).ready(function(){
+		$(".navbar-toggler").on('click', function(event) {
+			$(".mobile-navbar").css('display', 'block');
+			$(".navbar-toggler-close").css('display', 'block');
+			$(".navbar").addClass('navbar-mobile-active');
+			$(".navbar-toggler").css('opacity', '0');
+		});
+		$(".navbar-toggler-close").on('click', function(event) {
+			$(".mobile-navbar").css('display', 'none');
+			$(".navbar-toggler-close").css('display', 'none');
+			$(".navbar").removeClass('navbar-mobile-active');
+			$(".navbar-toggler").css('opacity', '1');
+		});
+
+        $(".mobile-navbar__open-internall_menu").click(function () {
+            $(this).next(".mobile-navbar__internall-menu").slideToggle();
+            $(this).children(".fa").toggleClass("open");
+        });
+
+		// $(".navbar-toggler-act").on('click', function(event) {
+		// 	$(".mobile-navbar").fadeOut('fast');
+		// 	$(".navbar").removeClass('navbar-mobile-active');
+		// });
 	/*==========================================
 	=            Owl slider скрипты            =
 	==========================================*/
-	
+
 
   	/**
   	 *
   	 * Инициализация Owl Карусели
   	 *
   	 */
-  	
+
   	// Слайдер главной страницы - 1
   	var owl = $('.index-carousel-1').owlCarousel({
 		nav : true,
@@ -23,7 +46,7 @@ $(document).ready(function(){
 		navSpeed : 1000,
 		smartSpeed: 1000,
 		dragEndSpeed: 1000,
-		items : 1, 
+		items : 1,
 		itemsDesktop : 1,
 		itemsDesktopSmall : 1,
 		itemsTablet: 1,
@@ -38,7 +61,7 @@ $(document).ready(function(){
   	 * Подставляем данные Страны города и Маленького изображения в блок .index-carousel-thumbnail
   	 *
   	 */
-  	
+
 	owl.on('changed.owl.carousel', function(event) {
 		var current = event.item.index;
 		var item = event.target;
@@ -52,17 +75,17 @@ $(document).ready(function(){
         var img = $(activeItem).data('thumb');
         $('.index-carousel-thumbnail img').attr('src', img);
         $('.index-carousel-thumbnail p').html(titleArr[0] + '.</br>' + titleArr[1]);
-		
-		
+
+
 
     /**
      *
      * Меняем в произвольном меню активный элемент
      *
      */
-        
 
-        // Находим элемент с хешем 
+
+        // Находим элемент с хешем
         var hash = $(activeItem).data('hash');
         // console.log(hash);
         // Убираем активный класс со всех li
@@ -75,7 +98,7 @@ $(document).ready(function(){
      * Меняем изображение справа вверху и слева внизу в верхнем слайдере
      *
      */
-    	
+
     	// Замена thumb
 
     	function changingImagesAround() {
@@ -127,7 +150,7 @@ $(document).ready(function(){
 	 * Произвольная навигация над слайдером
 	 *
 	 */
-	
+
 
 	var itemsCount = $('.owl-carousel').find('.owl-item').length;
 
@@ -158,7 +181,7 @@ $(document).ready(function(){
 		navSpeed : 1000,
 		smartSpeed: 1000,
 		dragEndSpeed: 1000,
-		items : 3, 
+		items : 3,
 		itemsDesktop : 3,
 		itemsDesktopSmall : 2,
 		itemsTablet: 2,
@@ -216,7 +239,7 @@ $(document).ready(function(){
 		navSpeed : 1000,
 		smartSpeed: 1000,
 		dragEndSpeed: 1000,
-		items : 3, 
+		items : 3,
 		itemsDesktop : 3,
 		itemsDesktopSmall : 2,
 		itemsTablet: 2,
@@ -237,7 +260,7 @@ $(document).ready(function(){
 				items: 3
 			},
 			1441: {
-				items: 4
+				items: 3
 			}
 		}
 	});
@@ -253,22 +276,14 @@ $(document).ready(function(){
 			$(this).html(arr[0] + '</br>' + arr[1]);
 		});
 	}
-	
+
 	var $window = $(window);
 
 	if($window.width() < 992) {
 		changeCarouselBlockNavAText();
 	}
 
-	
-
-
 	/*=====  End of Owl slider скрипты  ======*/
-
-	
-	
-	/*=====  End of Google maps  ======*/
-	
 
 });
 
@@ -280,7 +295,7 @@ $(document).ready(function(){
 var params;
 // dom ready
 jQuery(function () {
-    
+
     //if (typeof google !== "undefined"){
     if (window.google && google.maps) {
         // Map script is already loaded
@@ -288,8 +303,8 @@ jQuery(function () {
         initializeMap();
     } else {
         // alert("Lazy loading Google map...");
-        lazyLoadGoogleMap();            
-    }     
+        lazyLoadGoogleMap();
+    }
 
 });
 
@@ -326,7 +341,7 @@ function initialize(params) { // 55.7095962,37.6204635   55.727436,37.5654832
 
     var styles = {
         default: 'grey',
-        
+
         grey: [
       {
           "featureType": "water",
@@ -517,13 +532,15 @@ function initialize(params) { // 55.7095962,37.6204635   55.727436,37.5654832
 
 function lazyLoadGoogleMap() {
     jQuery.getScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyAydK_YpqgniEP50UOXEYG87mMzYLWmd04&callback=initializeMap")
-    .done(function (script, textStatus) {            
-        //alert("Google map script loaded successfully");
+    .done(function (script, textStatus) {
+        // alert("Google map script loaded successfully");
     })
     .fail(function (jqxhr, settings, ex) {
-        //alert("Could not load Google Map script: " + jqxhr);
+        // alert("Could not load Google Map script: " + jqxhr);
     });
 }
 function initializeMap() {
     initialize(params);
 }
+
+});

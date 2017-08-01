@@ -1,0 +1,579 @@
+@import "vars"
+@media only screen and (min-width: 992px)
+  .navbar-toggler
+    display: none
+  .mobile-navbar
+    display: none
+  .navbar .navbar-toggler-close
+    display: none
+@media only screen and (max-width: 992px)
+  .navbar-toggler-close
+    display: none
+  .navbar
+    height: 80px
+  .desctop-main-navbar
+    display: none
+  .mobile-navbar
+    display: none
+    .social
+      display: block
+      margin: 0
+      text-align: center
+      .social__item
+        display: inline-block
+
+@media only screen and (max-width: 1200px)
+  .navbar .navbar-main .nav-items.nav-items--right .nav-items__nav-item:last-child
+    margin-right: 0
+
+@media only screen and (max-width: 1200px)
+  .navbar .navbar-main .nav-items .nav-items__nav-item a
+    font-size: 12px
+
+@media only screen and (max-width: 1200px)
+  .navbar .navbar-main .navbar__logo
+    margin-left: -9vw
+    width: 18vw
+
+@media only screen and (max-width: 1100px)
+  .navbar .navbar-main .navbar__logo
+    margin-left: -7vw
+
+@media only screen and (max-width: 992px)
+  .navbar .navbar-main .navbar__logo
+    display: none
+  .navbar
+    &.navbar-mobile-active
+      overflow-y: scroll
+    .navbar-main
+      height: 100%
+      .mobile-navbar
+        margin-bottom: 20px
+      .tel
+        margin-right: 0
+      .nav-items
+        margin-top: 35px
+        .nav-items__nav-item
+          border-top: 2px solid #ffffff
+          margin-right: 0
+          a
+            font-size: 14px
+            display: block
+            min-width: 280px
+            text-align: center
+            padding: 24px 0
+            text-decoration: none
+            &:hover
+              text-decoration: underline
+              background: #F2F1E6
+  .hidden_md_down
+    display: none
+  .navbar .navbar-main .nav-items__nav-item .mobile-navbar__internall-menu
+    padding: 0
+    padding-bottom: 20px
+    display: none
+    li
+      list-style: none
+      a
+        font-size: 12px
+        color: #9e9e9e
+        padding: 5px 0
+        &:hover
+          background: none
+          color: #ff4936
+  .mobile-navbar__open-internall_menu
+    position: relative
+    .fa
+      transition: all .2s ease-in-out
+      font-size: 20px
+      position: absolute
+      right: 0
+      &.open
+        color: #9E9E9E
+        transform: rotate(180deg)
+
+
+@media only screen and (max-width: 992px)
+  .navbar .navbar__logo--mobile
+    display: block
+    position: absolute
+    top: 20px
+    left: 50%
+    margin-left: -85px
+
+@media only screen and (max-width: 992px)
+  .app .wrapper
+    padding-top: 90px
+
+.social
+  list-style: none
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  padding: 0
+  margin-left: 0.9vw
+  .social__item
+    margin-right: 1.4vw
+    &:last-child
+      margin-right: 0
+
+@media only screen and (max-width: 1200px)
+  .social
+    display: none
+
+.section__index-section--main-slider
+  padding-bottom: 9.02vw
+  width: 79.5vw
+  .cook-men
+    position: absolute
+    right: 17%
+    bottom: -45px
+    z-index: 1
+    width: 20.9vw
+  .cook-men-info
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    position: absolute
+    right: 0
+    bottom: 0
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    z-index: 1
+    margin-bottom: 42px
+    margin-right: 58px
+    .cook-men-info__title
+      font-size: 12px
+      font-weight: 300
+      letter-spacing: 5px
+      text-align: center
+      color: #ff4936
+      text-transform: uppercase
+      margin-bottom: 10px
+    .cook-men-info__name
+      font-size: 18px
+      line-height: 1.56
+      letter-spacing: 1.5px
+      text-align: center
+      color: #000
+      text-transform: uppercase
+      margin-bottom: 20px
+    .button__black-inverse
+      padding: 22px
+
+@media only screen and (max-width: 992px)
+  .section__index-section--main-slider
+    padding-bottom: 25vw
+
+@media only screen and (max-width: 768px)
+  .section__index-section--main-slider
+    padding-bottom: 33vw
+
+@media only screen and (max-width: 576px)
+  .section__index-section--main-slider
+    width: 100vw
+    padding-bottom: 64vw
+  .section__index-section--bistro-slider
+    padding:
+      left: 40px
+      right: 40px
+  .container.container--bistro
+    min-width: 236px
+    padding:
+      left: 10px
+      right: 10px
+
+@media only screen and (max-width: 1100px)
+  .section__index-section--main-slider .cook-men
+    right: -9%
+
+@media only screen and (max-width: 992px)
+  .section__index-section--main-slider .cook-men
+    right: -17%
+    width: 35vw
+    bottom: 0%
+
+@media only screen and (max-width: 768px)
+  .section__index-section--main-slider .cook-men
+    right: -23%
+    width: 40vw
+
+@media only screen and (max-width: 576px)
+  .section__index-section--main-slider .cook-men
+    right: -17%
+    width: 65vw
+
+@media only screen and (max-width: 576px)
+  .section__index-section--main-slider .cook-men-info .button__black-inverse
+    padding: 19px
+
+@media only screen and (max-width: 1100px)
+  .section__index-section--main-slider .cook-men-info
+    margin-bottom: 20px
+    margin-right: 110px
+
+@media only screen and (max-width: 992px)
+  .section__index-section--main-slider .cook-men-info
+    margin-bottom: 50px
+    margin-right: -90px
+    right: 50%
+@media only screen and (max-width: 1200px)
+  .section__index-section--delicates-slider
+    background-position: center
+
+@media only screen and (max-width: 992px)
+  .section__index-section--bistro-slider
+    padding-bottom: 27vw
+
+@media only screen and (max-width: 992px)
+  .section__index-section--bistro-slider:after
+    width: 41vw
+    height: 43vw
+
+@media only screen and (max-width: 992px)
+  .section__index-section--bistro-slider .image-tape
+    width: 150%
+
+@media only screen and (max-width: 1100px)
+  .section__index-section--contacts .col-address
+    width: 50%
+
+@media only screen and (max-width: 992px)
+  .section__index-section--contacts .col-address
+    width: 100%
+    margin-bottom: 45px
+
+@media only screen and (max-width: 992px)
+  .section__index-section--contacts .col-address:last-child::before
+    left: 50%
+    height: 25px
+    top: -33px
+
+@media only screen and (max-width: 768px)
+  .title.title--index
+    font-size: 20px
+
+@media only screen and (max-width: 576px)
+  .title.title--index
+    font-size: 16px
+    line-height: 1.25
+    letter-spacing: 0.8px
+    padding: 0 20px
+
+@media only screen and (max-width: 992px)
+  .carousel-block .index-carousel-thumbnail
+    top: initial
+    bottom: -15%
+    left: -30%
+
+@media only screen and (max-width: 768px)
+  .carousel-block .index-carousel-thumbnail
+    left: -37%
+
+@media only screen and (max-width: 576px)
+  .carousel-block .index-carousel-thumbnail
+    width: 120px
+    height: 120px
+    left: -25%
+    bottom: 0
+    padding: 10px
+
+@media screen and (min-width: 1441px)
+  .carousel-block .index-carousel-thumbnail
+    left: -10vw
+
+@media only screen and (max-width: 992px)
+  .carousel-block p.thumb-title
+    top: inherit
+    bottom: -7%
+    right: -25%
+
+@media only screen and (max-width: 576px)
+  .carousel-block p.thumb-title
+    top: inherit
+    bottom: -31%
+    right: -32%
+    padding: 10px 30px
+    min-width: inherit
+    font-size: 12px
+
+@media only screen and (max-width: 992px)
+  .carousel-block .carousel-block__nav
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+
+@media only screen and (max-width: 768px)
+  .carousel-block .carousel-block__nav
+    margin-top: 32px
+
+@media only screen and (max-width: 992px)
+  .carousel-block .carousel-block__nav li
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    text-align: center
+    margin: 0 20px
+    margin-bottom: 18px
+
+@media only screen and (max-width: 576px)
+  .carousel-block .carousel-block__nav li
+    margin: 0 10px
+
+@media screen and (min-width: 1441px)
+  .carousel-block .unslider-image--right.active
+    right: -23vw
+
+@media only screen and (max-width: 1200px)
+  .carousel-block .unslider-image--right.active
+    right: -14%
+
+@media only screen and (max-width: 1200px)
+  .carousel-block .unslider-image--right
+    min-width: 220px
+    max-width: 220px
+    img
+      width: 100%
+
+@media only screen and (max-width: 992px)
+  .carousel-block .unslider-image--right
+    display: none
+
+@media screen and (min-width: 1441px)
+  .carousel-block .unslider-image--left.active
+    bottom: -3vw
+    left: -12vw
+
+@media only screen and (max-width: 1200px)
+  .carousel-block .unslider-image--left
+    min-width: 340px
+    max-width: 340px
+    img
+      width: 100%
+
+@media only screen and (max-width: 992px)
+  .carousel-block .unslider-image--left
+    display: none
+
+@media only screen and (max-width: 992px)
+  .owl-carousel .owl-nav
+    z-index: 1
+    margin-top: -65px
+
+@media only screen and (max-width: 1100px)
+  .owl-carousel .owl-nav .owl-prev
+    left: -7vw
+
+@media only screen and (max-width: 992px)
+  .owl-carousel .owl-nav .owl-prev
+    left: -6vw
+
+@media only screen and (max-width: 576px)
+  .owl-carousel .owl-nav .owl-prev
+    left: -3vw
+
+@media only screen and (max-width: 1100px)
+  .owl-carousel .owl-nav .owl-next
+    right: -7vw
+
+@media only screen and (max-width: 992px)
+  .owl-carousel .owl-nav .owl-next
+    right: -6vw
+
+@media only screen and (max-width: 576px)
+  .owl-carousel .owl-nav .owl-next
+    right: -3vw
+
+@media only screen and (max-width: 576px)
+  .index-carousel-1
+    margin-top: 25px
+
+@media only screen and (max-width: 576px)
+  .index-carousel-1 .index-carousel__slider-1 .inner h2
+    font-size: 14.33vw
+
+@media only screen and (max-width: 576px)
+  .index-carousel-1 .index-carousel__slider-1 .inner p
+    font-size: 14px
+    padding: 0 20px
+
+@media only screen and (max-width: 992px)
+  .index-carousel-1 .index-carousel__slider-1.index-carousel__slider-1--title-image
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    img
+      height: 455px
+      display: block
+
+@media only screen and (max-width: 992px)
+  .index-carousel-1 .index-carousel__slider-1.index-carousel__slider-1--title-text
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    img
+      height: 455px
+      display: block
+
+@media only screen and (max-width: 1100px)
+  .index-carousel-2 .owl-nav .owl-prev
+    left: -4vw
+
+@media only screen and (max-width: 1100px)
+  .index-carousel-2 .owl-nav .owl-next
+    right: -4vw
+
+@media only screen and (max-width: 992px)
+  .container.container--bistro:before
+    width: 30vw
+    height: 29vw
+    left: -18vw
+
+@media only screen and (max-width: 992px)
+  .container.container--bistro:after
+    width: 29vw
+    height: 33vw
+    right: -13vw
+    bottom: -13vw
+
+@media only screen and (max-width: 768px)
+  .container.container--bistro:after
+    right: -17vw
+
+@media only screen and (max-width: 992px)
+  .container.container--bistro .index-carousel-3 .owl-nav
+    top: 36%
+
+@media only screen and (max-width: 992px)
+  .container.container--bistro .index-carousel-3 .owl-nav .owl-prev
+    left: -10vw
+
+@media only screen and (max-width: 992px)
+  .container.container--bistro .index-carousel-3 .owl-nav .owl-next
+    right: -10vw
+
+@media only screen and (max-width: 768px)
+  .container.container--contacts
+    width: 100vw
+
+@media only screen and (max-width: 576px)
+  .carousel__col-3
+    max-width: inherit
+
+@media only screen and (max-width: 992px)
+  .carousel__col-3 .owl-item .inner
+    margin: 0 19%
+
+@media screen and (min-width: 1441px)
+  .carousel__col-3
+    max-width: none
+    .owl-item .inner
+      -webkit-box-align: stretch
+      -ms-flex-align: stretch
+      align-items: stretch
+
+@media only screen and (max-width: 576px)
+  a.button
+    padding: 15px 22px
+    font-size: 12px
+
+@media only screen and (max-width: 992px)
+  footer .container
+    margin-bottom: 20px
+
+
+@media only screen and (max-width: 992px)
+  .site-footer
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+
+@media only screen and (max-width: 992px)
+  .site-footer .site-footer__footer-col:first-child
+    text-align: center
+
+@media only screen and (max-width: 992px)
+  .site-footer .site-footer__footer-col:nth-child(2)
+    margin-bottom: 12px
+
+@media only screen and (max-width: 992px)
+  .site-footer .site-footer__footer-col:last-child
+    text-align: center
+
+@media only screen and (max-width: 992px)
+  .site-footer .site-footer__footer-col .social .site-footer__social__item:first-child
+    margin-right: 10px
+
+@media only screen and (max-width: 992px)
+  .site-footer .site-footer__footer-col .social
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+@media only screen and (min-width: 320px)
+  .container
+    min-width: 320px
+    max-width: 100%
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  a.button.button__general
+    min-width: auto
+    width: 200px
+  .index-carousel-1 .index-carousel__slider-1.index-carousel__slider-1--title-image img,
+  .index-carousel-1 .index-carousel__slider-1.index-carousel__slider-1--title-text img
+    height: 330px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/

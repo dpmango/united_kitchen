@@ -1,0 +1,887 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	position: relative
+	line-height: 1.75
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+	/**/
+
+
+
+html, body
+  margin: 0
+  min-width: 320px
+  max-width: 100%
+  background: transparent
+  font-size: 14px
+  font-family: "SFUIText-Regular", sans-serif
+  color: #111111
+  overflow-x: hidden
+
+dl, ol, ul
+  margin-bottom: 0
+
+a
+  color: #111111
+  font-family: "SFUIText-Regular", sans-serif
+
+*
+  font-family: "SFUIText-Regular", sans-serif
+
+a
+  &:focus, &:hover
+    color: initial
+.tel
+	margin-top: 14px
+.navbar-col-left, .navbar-col-right
+	height: 100%
+.navbar
+  padding: 0 5.6vw
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 1
+  .navbar-main
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    height: 8vw
+    // height: 11.8vw
+    .navbar-col-left
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -ms-flex-preferred-size: 50%
+      flex-basis: 50%
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+      float: left
+      -webkit-box-pack: start
+      -ms-flex-pack: start
+      justify-content: flex-start
+    .navbar-col-right
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -ms-flex-preferred-size: 50%
+      flex-basis: 50%
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+      -webkit-box-pack: end
+      -ms-flex-pack: end
+      justify-content: flex-end
+    .tel
+    	margin-right: 3.8vw
+    .nav-items
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-orient: horizontal
+      -webkit-box-direction: normal
+      -ms-flex-direction: row
+      flex-direction: row
+      list-style: none
+      padding: 0
+      &.nav-items--right .nav-items__nav-item
+        margin-right: 1.4vw
+        a
+          font-size: 12px
+      .nav-items__nav-item
+        margin-right: 1.7vw
+        position: relative
+        &.nav-items__nav-item--bistro::before
+          content: ''
+          display: block
+          width: 3.5vw
+          height: 6vw
+          position: absolute
+          left: 50%
+          margin-left: -1.85vw
+          top: -3vw
+          background: url("../img/svg/board-icon.svg")
+          background-repeat: no-repeat
+          background-size: contain
+          z-index: -1
+        &.nav-items__nav-item--delicates::before
+          content: ''
+          display: block
+          width: 2.8vw
+          height: 3.9vw
+          position: absolute
+          left: 50%
+          margin-left: -1.4vw
+          top: -1.2vw
+          background: url("../img/svg/jar-icon.svg")
+          background-repeat: no-repeat
+          background-size: contain
+          z-index: -1
+        a
+          text-transform: uppercase
+          letter-spacing: 2px
+    .navbar__logo
+      position: absolute
+      height: 100%
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+      left: 50%
+      top: 0
+      margin-left: -11.42vw
+      width: 20.85vw
+      img
+        width: 100%
+  .navbar-toggler, .navbar-toggler-close
+    cursor: pointer
+    padding: 0
+    margin-top: 30px
+    .navbar-toggler-icon
+      background-image: url("../img/svg/hamburger.svg")
+  .navbar__logo--mobile
+    display: none
+    width: 170px
+    img
+      width: 100%
+.navbar .navbar-toggler, .navbar .navbar-toggler-close
+	border: none
+	background-color: transparent
+	&:focus, &:hover
+		outline: none
+		background-color: none
+.desctop-main-navbar
+	display: flex
+	height: 90%
+.navbar .navbar-toggler-close
+	float: right
+	.navbar-toggler-icon
+		background-image: url('../img/svg/closer.svg')
+		height: 18px !important
+		// background-size: cover
+
+.navbar
+	.navbar-toggler
+		.navbar-toggler-icon
+			width: 20px
+			height: 12px
+			background-repeat: no-repeat
+			display: block
+	.navbar-toggler-close
+		.navbar-toggler-icon
+			width: 20px
+			height: 12px
+			background-repeat: no-repeat
+			display: block
+.navbar-mobile-active
+	background-color: rgba(237,235,221, .9)
+	position: fixed
+	z-index: 10
+	top: 0
+	left: 0
+	display: block
+	height: 100vh !important
+	.navbar-main
+		.nav-items
+			flex-direction: column
+			align-items: center
+			justify-content: center
+.owl-carousel
+	position: relative
+	z-index: 1
+
+.app
+  .wrapper
+    padding-top: 11vw
+    // padding-top: 11.8vw
+  .section
+    position: relative
+  &.app-index .row.wrapper
+    background: #fff
+
+.section__index-section--delicates-slider
+  background: url("../img/delicates-slider-bg.png")
+  width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  padding-top: 34px
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  background-size: cover
+  z-index: 1
+  .section__heading-img
+    margin-bottom: 10px
+    width: 43.4vw
+  p
+    text-align: center
+    &.index-carousel-2__slide--product-type
+      font-size: 12px
+      font-weight: 300
+      letter-spacing: 5.4px
+      text-align: center
+      color: #a0a0a0
+      text-transform: uppercase
+      margin-top: 26px
+    &.index-carousel-2__slide--product-name
+      font-size: 24px
+      line-height: 0.83
+      letter-spacing: 1.8px
+      text-align: center
+      color: #fff
+      text-transform: uppercase
+    &.index-carousel-2__slide--product-vol
+      font-size: 14px
+      font-weight: 300
+      line-height: 1.64
+      letter-spacing: 1px
+      text-align: center
+      color: #ffffff
+    &.index-carousel-2__slide--product-price
+      font-size: 24px
+      line-height: 1.42
+      letter-spacing: 1.8px
+      text-align: center
+      color: #e6e6e4
+      margin-bottom: 24px
+      margin-top: 24px
+      text-transform: uppercase
+    &.entry-text
+      display: inline-block
+      width: 400px
+      font-family: "AmericanTypewriter", sans-serif
+      font-size: 16px
+      line-height: 1.5
+      text-align: center
+      color: #fff
+      margin-bottom: 46px
+  a.button__white-inverse
+    padding: 20px 25px
+    max-width: 163px
+    margin: 0 auto
+    margin-bottom: 41px
+
+
+.section__index-section--bistro-slider
+  background-color: #edebdd
+  width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  padding-top: 60px
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  padding: 12.77vw 0 7.7vw
+  .section__heading-img
+    z-index: 2
+    position: absolute
+    margin-top: -8.75vw
+    left: 50%
+    margin-left: -14vw
+    width: 28vw
+  &:after
+    content: ''
+    width: 28.2vw
+    height: 27.7vw
+    display: block
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 0
+    background-repeat: no-repeat
+    background-size: cover
+    background-image: url("../img/trava.png")
+  .button
+    &.button__general, &.button__black
+      margin-top: 40px
+      margin-bottom: 60px
+  .instagram-id
+    font-size: 3.33vw
+    line-height: 1.9
+    letter-spacing: -0.243vw
+    text-align: center
+    color: #000000
+    width: 100%
+    text-transform: uppercase
+  .image-tape
+    width: 100%
+    position: absolute
+    bottom: -14vw
+    left: 0
+    display: block
+
+.section__index-section--contacts
+  padding-top: 17vw
+  .google-map
+    margin-bottom: 50px
+    height: 466px
+    width: 100%
+  .col-address
+    padding-right: 7px
+    text-align: center
+    padding: 0 10%
+    margin-bottom: 13px
+    &:last-child
+      border: none
+      &::before
+        content: ''
+        height: 100%
+        width: 2px
+        background-color: #e6e6e4
+        position: absolute
+        top: 0
+        left: -1px
+    h2.col-address__address-title
+      font-size: 30px
+      line-height: 1.13
+      letter-spacing: 2.3px
+      text-align: center
+      color: #000
+      text-transform: uppercase
+      margin-bottom: 20px
+    .col-address__address-street
+      font-size: 12px
+      font-weight: 300
+      text-align: center
+      color: #000
+      text-transform: uppercase
+      margin-bottom: 8px
+    .col-address__working-time
+      display: inline-block
+      font-size: 12px
+      font-weight: 300
+      line-height: 1.17
+      text-align: center
+      color: #fff
+      padding: 8px 10px
+      background-color: #000
+      margin-bottom: 20px
+    .col-address__tel
+      margin-bottom: 20px
+      font-size: 12px
+      font-weight: 300
+      line-height: 1.17
+      text-align: center
+      color: #000
+
+
+.title.title--index
+  height: 36px
+  font-size: 24px
+  line-height: 1.5
+  letter-spacing: 1.2px
+  text-align: center
+  color: #ff4936
+  text-transform: uppercase
+
+.carousel-block
+  position: relative
+  width: 100%
+  &:after
+    clear: both
+    content: '.'
+    visibility: hidden
+  .index-carousel-thumbnail
+    width: 240px
+    height: 240px
+    background: #fff
+    position: absolute
+    top: -2%
+    padding: 20px
+    -webkit-transform: rotate(-11deg)
+    transform: rotate(-11deg)
+    left: -20%
+    -webkit-box-shadow: 0 8px 42px 0 rgba(0, 0, 0, 0.5)
+    box-shadow: 0 8px 42px 0 rgba(0, 0, 0, 0.5)
+    z-index: 1
+    img
+      width: 100%
+  p.thumb-title
+    color: #fff
+    background-color: #000
+    position: absolute
+    top: 50%
+    right: -30%
+    font-family: "AmericanTypewriter", sans-serif
+    font-size: 16px
+    line-height: 1.25
+    letter-spacing: 1.2px
+    text-align: center
+    padding: 10px 60px
+    min-width: 200px
+  .carousel-block__nav
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    list-style: none
+    margin-top: 30px
+    padding-left: 0
+    li
+      margin: 0 40px
+      a
+        font-size: 12px
+        line-height: 1
+        letter-spacing: .9px
+        text-align: center
+        color: #000
+        text-transform: uppercase
+        cursor: pointer
+      &.active a
+        color: #ff4936
+        text-decoration: underline
+  .unslider-image--right
+    position: absolute
+    top: -8%
+    right: -100%
+    -webkit-transition: all .5s ease-in-out
+    transition: all .5s ease-in-out
+    min-width: 460px
+    text-align: left
+    &.active
+      right: -34%
+  .unslider-image--left
+    position: absolute
+    bottom: -15%
+    left: -100%
+    -webkit-transition: all .5s ease-in-out
+    transition: all .5s ease-in-out
+    min-width: 375px
+    text-align: right
+    &.active
+      left: -20%
+
+.owl-carousel
+  .owl-nav
+    background-color: transparent
+    margin: 0
+    padding: 0
+    position: absolute
+    top: 50%
+    margin-top: -32px
+    left: 0
+    width: 100%
+    z-index: -1
+    .owl-prev
+      background: transparent
+      border: none
+      padding: 0
+      margin: 0
+      position: absolute
+      left: -6vw
+      .prev-button
+        display: block
+        width: 72.3px
+        height: 58.7px
+        background-color: transparent
+        background: url("../img/svg/arrow-left-black.svg")
+        background-repeat: no-repeat
+        left: -10%
+        border: none
+        outline: none
+        padding: 0
+        margin: 0
+        cursor: pointer
+        &::before
+          content: none
+        &:focus, &:hover
+          background: url("../img/svg/arrow-left-red.svg")
+          background-color: transparent
+      &:hover, &:focus
+        background-color: transparent
+        margin: 0
+        padding: 0
+      &.disabled
+        background-image: url("../img/svg/arrow-left-grey.svg")
+        .prev-button
+          background-image: url("../img/svg/arrow-left-grey.svg")
+    .owl-next
+      background: transparent
+      border: none
+      padding: 0
+      margin: 0
+      position: absolute
+      right: -6vw
+      .next-button
+        display: block
+        width: 72.3px
+        height: 58.7px
+        background-color: transparent
+        background: url("../img/svg/arrow-right-black.svg")
+        background-repeat: no-repeat
+        right: -10%
+        border: none
+        outline: none
+        padding: 0
+        margin: 0
+        cursor: pointer
+        &::before
+          content: none
+        &:focus, &:hover
+          background: url("../img/svg/arrow-right-red.svg")
+          background-color: transparent
+      &:hover, &:focus
+        background-color: transparent
+        margin: 0
+        padding: 0
+      &.disabled
+        background-image: url("../img/svg/arrow-right-grey.svg")
+        .next-button
+          background-image: url("../img/svg/arrow-right-grey.svg")
+  .owl-dots
+    margin-top: 35px
+    .owl-dot
+      span
+        background-color: #000
+      &.active span
+        border: 1px solid #000
+        background: #fff
+      &:hover span, &:focus span
+        background-color: #000
+
+.index-carousel-1
+  margin-top: 50px
+  .item img
+    display: block
+    width: 100%
+    height: auto
+  .index-carousel__slider-1
+    .inner
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-pack: center
+      -ms-flex-pack: center
+      justify-content: center
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+      -webkit-box-orient: vertical
+      -webkit-box-direction: normal
+      -ms-flex-direction: column
+      flex-direction: column
+      h2
+        font-family: "SFUIText-Regular", sans-serif
+        font-size: 8.33vw
+        font-weight: normal
+        font-style: normal
+        font-stretch: normal
+        line-height: 1
+        letter-spacing: -5px
+        text-align: center
+        color: #ffffff
+        text-transform: uppercase
+      p
+        font-family: "AmericanTypewriter", sans-serif
+        font-size: 18px
+        line-height: 1.44
+        text-align: center
+        color: #fff
+        margin-bottom: 35px
+    &.index-carousel__slider-1--title-image .inner
+      top: 18%
+      h2
+        display: none
+    &.index-carousel__slider-1--title-text .inner h2
+      margin-top: 0
+      margin-bottom: 5.5%
+
+.index-carousel-2
+  .owl-item
+    height: 560px
+    .inner
+      border: solid 1px #979797
+      .inner__bottom
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: vertical
+        -webkit-box-direction: normal
+        -ms-flex-direction: column
+        flex-direction: column
+        -webkit-box-pack: end
+        -ms-flex-pack: end
+        justify-content: flex-end
+        height: 100%
+    img
+      width: auto
+      max-height: 250px
+      margin: 0 auto
+  .owl-nav
+    top: 40%
+    .owl-prev .prev-button
+      background: url("../img/svg/arrow-left-white.svg")
+    .owl-next .next-button
+      background: url("../img/svg/arrow-right-white.svg")
+  .owl-dots .owl-dot
+    span
+      background-color: #fff
+    &.active span
+      background-color: #000
+      border: 1px solid #fff
+
+.container .container--bistro
+	width: 100%
+.container
+  &.container--main
+    width: 100%
+    padding: 0 4.8vw
+  &.container--bistro
+    padding: 0 4.8vw
+    background-color: #fff
+    padding-top: 8.75vw
+    padding-bottom: 36px
+    z-index: 1
+    &:before
+      content: ''
+      display: block
+      width: 16.73vw
+      height: 16.11vw
+      background: url("../img/svg/chopsticks.svg")
+      background-size: cover
+      background-repeat: no-repeat
+      left: -8vw
+      top: -8vw
+      position: absolute
+    &:after
+      content: ''
+      display: block
+      width: 18.89vw
+      height: 21.73vw
+      background: url("../img/svg/woman.svg")
+      background-size: cover
+      background-repeat: no-repeat
+      right: -13vw
+      bottom: -7vw
+      position: absolute
+    .index-carousel-3
+      position: relative
+      .index-carousel-3__slide--product-img
+        width: 100%
+        margin-bottom: 20px
+      .index-carousel-3__slide--product-type
+        font-size: 12px
+        font-weight: 300
+        letter-spacing: 5px
+        text-align: center
+        color: #ff4936
+      .index-carousel-3__slide--product-name
+        font-size: 18px
+        line-height: 1.33
+        letter-spacing: 1.4px
+        text-align: center
+        color: #000
+        text-transform: uppercase
+        margin-bottom: 10px
+      .index-carousel-3__slide--product-vol
+        font-size: 12px
+        font-weight: 300
+        line-height: 1.17
+        letter-spacing: 1px
+        text-align: center
+        color: #7d7d7d
+      .index-carousel-3__slide--product-description
+        font-family: "AmericanTypewriter", sans-serif
+        font-size: 14px
+        line-height: 1.43
+        text-align: center
+        color: #111111
+      .index-carousel-3__slide--product-price
+        font-size: 24px
+        font-weight: 300
+        line-height: 1.0
+        letter-spacing: 1px
+        text-align: center
+        color: #000
+        margin-bottom: 24px
+        text-transform: uppercase
+      .owl-nav
+        top: 30%
+        .owl-prev
+          left: -7.5vw
+        .owl-next
+          right: -7.5vw
+  &.container--contacts
+    width: 79.5vw
+
+.carousel__col-3
+  max-width: 1280px
+  .owl-item
+    .item
+      height: 100%
+    .inner
+      margin: 0 auto
+      text-align: center
+      height: 100%
+      margin: 0 6.7%
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-orient: vertical
+      -webkit-box-direction: normal
+      -ms-flex-direction: column
+      flex-direction: column
+
+
+a.button
+  font-size: 16px
+  font-family: "SFUIText-Regular", sans-serif
+  line-height: 1.0
+  letter-spacing: 1.2px
+  text-align: center
+  color: #fff
+  padding: 18px 45px
+  border: 1px solid #fff
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  text-transform: uppercase
+  display: inline-block
+  &.button__black-inverse
+    background: transparent
+    border-color: #000
+    color: #000
+    &:hover, &:focus
+      color: #000
+  &.button__black
+    background: #000
+    &:hover, &:focus
+      color: #fff
+  &.button__white
+    background: #fff
+    color: #000
+    &:hover, &:focus
+      color: #000
+  &.button__white-inverse
+    background: transparent
+    &:hover, &:focus
+      color: #fff
+  &.button__general
+    margin: 0 auto
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    min-width: 320px
+    max-width: 320px
+    margin-top: 30px
+    margin-bottom: 54px
+  &.disabled
+    opacity: 30%
+
+
+footer .container
+  padding: 0
+
+.site-footer
+	.site-footer__footer-col
+		&:last-child
+			margin-top: 15px
+.site-footer
+  height: 100px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+  -ms-flex-direction: row
+  flex-direction: row
+  .site-footer__footer-col
+    padding: 0
+    &:first-child
+      text-align: left
+    &:last-child
+      text-align: right
+    .social
+      -webkit-box-pack: center
+      -ms-flex-pack: center
+      justify-content: center
+      margin-left: 0
+      .site-footer__social__item
+        margin-left: 0
+        &:first-child
+          margin-right: 20px
+    .copyright
+      font-size: 14px
+      font-weight: 300
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+      letter-spacing: 1px
+      color: #000
+      text-transform: uppercase
+    .site-footer__design
+      text-decoration: none
+    p
+      margin-bottom: 0
+
+
+
+
+
+@import "media" // Всегда в конце
